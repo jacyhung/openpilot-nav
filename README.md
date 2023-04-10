@@ -48,7 +48,7 @@ export MAPBOX_TOKEN=<your mapbox token here, please remote the <> from this>
 ```
 2. Paste the following command, 
 ```bash
-cd /data/selfdrive/navd/; wget https; mkdir templates; wget https
+cd /data/selfdrive/navd/; wget https://raw.githubusercontent.com/jacyhung/openpilot-nav/master/app.py; mkdir templates; wget https://raw.githubusercontent.com/jacyhung/openpilot-nav/master/templates/index.html
 ```
 3. Modify the following file, `/data/selfdrive/manager/process_config.py`, and paste the following somewhere in the `procs` list with proper indentation, 
 ```python
