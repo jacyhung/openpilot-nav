@@ -48,13 +48,13 @@ export MAPBOX_TOKEN=<your mapbox token here, please remote the <> from this>
 ```
 2. Paste the following command, 
 ```bash
-cd /data/selfdrive/navd/; wget https://raw.githubusercontent.com/jacyhung/openpilot-nav/master/navsrv.py; mkdir templates; wget https://raw.githubusercontent.com/jacyhung/openpilot-nav/master/templates/index.html
+cd /data/openpilot/selfdrive/navd/; wget https://raw.githubusercontent.com/jacyhung/openpilot-nav/master/navsrv.py; mkdir templates; cd templates; wget https://raw.githubusercontent.com/jacyhung/openpilot-nav/master/templates/index.html
 ```
-3. Modify the following file, `/data/selfdrive/manager/process_config.py`, and paste the following somewhere in the `procs` list with proper indentation, 
+3. Modify the following file, `/data/openpilot/selfdrive/manager/process_config.py`, and paste the following somewhere in the `procs` list with proper indentation, 
 ```python
 PythonProcess("navsrv", "selfdrive.navd.navsrv", offroad=True),
 ```
-4. Modify the following file, `/data/selfdrive/navd/templates/index.html`, and paste your Mapbox token into the part that says, 
+4. Modify the following file, `/data/openpilot/selfdrive/navd/templates/index.html`, and paste your Mapbox token into the part that says, 
 ```javascript
 const ACCESS_TOKEN = 'YOUR MAPBOX TOKEN HERE';
 ```
