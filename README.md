@@ -31,7 +31,7 @@ Are you a cheapskate and don't want to fork up $16/mo for comma prime lite, and 
 7. SSH into your comma three, and install cloudflared. 
     1. Download the latest cloudflared by running,
     ```bash
-    sudo mount -o rw,remount /; cd /data; wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64.deb; sudo apt install ./cloudflared-linux-aarch64.deb
+    sudo mount -o rw,remount /; cd /data; wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64.deb; sudo apt install ./cloudflared-linux-arm64.deb
     ```
     2. After this installs, return to CloudFlare.
 8. Copy the command listed under `If you already have cloudflared installed on your machine:` in CloudFlare, and paste it into your comma three.
