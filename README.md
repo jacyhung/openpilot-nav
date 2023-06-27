@@ -9,6 +9,7 @@ Are you a cheapskate and don't want to fork up $16/mo for comma prime lite, and 
 * Domain Name* 
 * SSH access to your comma three
 * Some technical knowledge
+* Data SIM (not required, skip CF tunnel)*
 
 <i>* not necessary, but extremely convenient</i>
 
@@ -20,7 +21,7 @@ Are you a cheapskate and don't want to fork up $16/mo for comma prime lite, and 
 3. Done!
 
 ### Setting up a CloudFlare Tunnel 
-<i>If you want to just hotspot into your comma three, or use a dedicated IP, feel free to skip this step.</i>
+<i>Requires a data SIM, if you don't want to have to hotspot in everytime.<br> If you want to just hotspot into your comma three, or use a dedicated IP, feel free to skip this step.</i>
 
 1. Head over to <a href="https://cloudflare.com">cloudflare.com</a> and create an account.
 2. Add your domain to your CloudFlare account with "add site", and point ns.
@@ -35,6 +36,7 @@ Are you a cheapskate and don't want to fork up $16/mo for comma prime lite, and 
     ```
     2. After this installs, return to CloudFlare.
 8. Copy the command listed under `If you already have cloudflared installed on your machine:` in CloudFlare, and paste it into your comma three.
+    - If you get an error, paste this command in first, then try again. `sudo mount -o rw,remount /`
 9. Click "next" in CloudFlare. Enter an optional subdomain, and select the domain you added previously to CloudFlare. You can set this for example, to `nav.domain.com`. 
 10. Under "Service", select `HTTP` as the Type, and type `http://localhost:8000` into the text field.
 11. Click `save tunnel`.
